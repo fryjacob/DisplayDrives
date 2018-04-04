@@ -10,6 +10,14 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var sourceTableView: NSScrollView!
+    @IBOutlet weak var targetTableView: NSScrollView!
+    
+    @IBAction func okButton(_ sender: Any) {
+    }
+    @IBAction func exitButton(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
