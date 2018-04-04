@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC32D76E20754D9F00B5AAC8 /* Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC32D76D20754D9F00B5AAC8 /* Directory.swift */; };
 		DC76742F20748D1B007BE8AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76742E20748D1B007BE8AF /* AppDelegate.swift */; };
 		DC76743120748D1B007BE8AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76743020748D1B007BE8AF /* ViewController.swift */; };
 		DC76743320748D1E007BE8AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC76743220748D1E007BE8AF /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC32D76D20754D9F00B5AAC8 /* Directory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Directory.swift; sourceTree = "<group>"; };
 		DC76742B20748D1B007BE8AF /* DisplayDrives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisplayDrives.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC76742E20748D1B007BE8AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC76743020748D1B007BE8AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC05B9BD20753BB600F2333C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC76743020748D1B007BE8AF /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DC05B9BE20753BC700F2333C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC05B9BF20753BFC00F2333C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC76743420748D1E007BE8AF /* Main.storyboard */,
+				DC76743220748D1E007BE8AF /* Assets.xcassets */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DC76742220748D1B007BE8AF = {
 			isa = PBXGroup;
 			children = (
@@ -96,12 +122,13 @@
 		DC76742D20748D1B007BE8AF /* DisplayDrives */ = {
 			isa = PBXGroup;
 			children = (
-				DC76742E20748D1B007BE8AF /* AppDelegate.swift */,
-				DC76743020748D1B007BE8AF /* ViewController.swift */,
-				DC76743220748D1E007BE8AF /* Assets.xcassets */,
-				DC76743420748D1E007BE8AF /* Main.storyboard */,
 				DC76743720748D1E007BE8AF /* Info.plist */,
 				DC76743820748D1E007BE8AF /* DisplayDrives.entitlements */,
+				DC76742E20748D1B007BE8AF /* AppDelegate.swift */,
+				DC32D76D20754D9F00B5AAC8 /* Directory.swift */,
+				DC05B9BD20753BB600F2333C /* View Controllers */,
+				DC05B9BF20753BFC00F2333C /* Model */,
+				DC05B9BE20753BC700F2333C /* Supporting Files */,
 			);
 			path = DisplayDrives;
 			sourceTree = "<group>";
@@ -192,6 +219,11 @@
 				TargetAttributes = {
 					DC76742A20748D1B007BE8AF = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					DC76743C20748D1F007BE8AF = {
 						CreatedOnToolsVersion = 9.3;
@@ -256,6 +288,7 @@
 			files = (
 				DC76743120748D1B007BE8AF /* ViewController.swift in Sources */,
 				DC76742F20748D1B007BE8AF /* AppDelegate.swift in Sources */,
+				DC32D76E20754D9F00B5AAC8 /* Directory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +452,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = DisplayDrives/DisplayDrives.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DisplayDrives/Info.plist;
@@ -437,7 +469,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = DisplayDrives/DisplayDrives.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DisplayDrives/Info.plist;
