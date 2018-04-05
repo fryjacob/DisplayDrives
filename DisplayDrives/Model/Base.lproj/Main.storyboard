@@ -804,15 +804,7 @@ DQ
                                     <action selector="exitButton:" target="XfG-lQ-9wD" id="WuB-LQ-TIx"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oks-xT-1R7">
-                                <rect key="frame" x="30" y="142" width="175" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="radio" title="Create encrypted volume" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="R1h-lT-rsR">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                            <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uwa-XB-V91">
+                            <secureTextField identifier="passwordField" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uwa-XB-V91">
                                 <rect key="frame" x="148" y="101" width="200" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="NAt-Y0-FQg">
@@ -824,7 +816,7 @@ DQ
                                     </allowedInputSourceLocales>
                                 </secureTextFieldCell>
                             </secureTextField>
-                            <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RuR-9p-XRc">
+                            <secureTextField identifier="confirmField" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RuR-9p-XRc">
                                 <rect key="frame" x="148" y="69" width="200" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="qhQ-x9-YVn">
@@ -924,9 +916,20 @@ DQ
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
+                            <button identifier="encryptButtonID" verticalHuggingPriority="750" fixedFrame="YES" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kkq-uH-Rd7">
+                                <rect key="frame" x="51" y="144" width="138" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Encrypt disk image" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="9p2-fE-Gz6">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="confirmField" destination="RuR-9p-XRc" id="aIh-9y-uVY"/>
+                        <outlet property="encryptButton" destination="kkq-uH-Rd7" id="Ldi-uH-XNv"/>
+                        <outlet property="passwordField" destination="uwa-XB-V91" id="qCH-c3-8Mo"/>
                         <outlet property="sourceTableView" destination="vNP-ff-tPO" id="LSb-GW-pNJ"/>
                         <outlet property="targetTableView" destination="y8t-oP-clb" id="lOp-aO-zH1"/>
                     </connections>

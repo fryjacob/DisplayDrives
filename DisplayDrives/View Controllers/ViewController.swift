@@ -15,7 +15,8 @@ class ViewController: NSViewController {
      TODO:
         []  Check the size of the target drive to make sure the image will fit
         []  Add option to encrypt, take passwords, check they match.
-     
+        []  Make sure it works with\ spaces and\ escpape characters in file paths
+        []  Reset fields on completion, show message
      
      
  
@@ -52,24 +53,55 @@ class ViewController: NSViewController {
 
     @IBOutlet weak var sourceTableView: NSTableView!
     @IBOutlet weak var targetTableView: NSTableView!
-
+    @IBOutlet weak var encryptButton: NSButton!
+    @IBOutlet weak var passwordField: NSSecureTextField!
+    @IBOutlet weak var confirmField: NSSecureTextField!
+    
     
     // Actions
+
+
     @IBAction func okButton(_ sender: NSButton) {
         print("Clone \(sourcePath) to \(targetPath)")
         
-        let path = "/usr/bin/hdiutil"
-        let arguments = ["create", "-srcfolder", "\(sourcePath)", "\(targetPath)/test.dmg", "-ov", "-verbose"]
-        print("\(path) \(arguments)")
-        sender.isEnabled = false
-        let task = Process.launchedProcess(launchPath: path, arguments: arguments)
+//        let path = "/usr/bin/hdiutil"
+//        let arguments = ["create", "-srcfolder", "\(sourcePath)", "\(targetPath)/test.dmg", "-ov", "-verbose"]
+//        print("\(path) \(arguments)")
+//        sender.isEnabled = false
+//        let task = Process.launchedProcess(launchPath: path, arguments: arguments)
+//        task.waitUntilExit()
+//        sender.isEnabled = true
         
-        task.waitUntilExit()
-        sender.isEnabled = true
+        if encryptButton.state == NSControl.StateValue.on {
+            print("Encrypted")
+            if passwordField.stringValue == confirmField.stringValue {
+                print("passwords match")
+                
+                
+                        let path = "/usr/bin/hdiutil"
+                        let arguments = ["create", "-srcfolder", "\(sourcePath)", "-encryption", "-stdinpass", "\(targetPath)/test.dmg", "-ov"]
+                        print("\(path) \(arguments)")
+                        sender.isEnabled = false
+                
+//                        Not sure if this works...
+                        var task =  Process.launchedProcess(launchPath: "/bin/echo", arguments: ["-n", passwordField.stringValue, "|"])
+                        task = Process.launchedProcess(launchPath: path, arguments: arguments)
+                        task.waitUntilExit()
+                        sender.isEnabled = true
+            } else {
+                print("no match")
+            }
+        } else {
+            print("Not encrypted")
+
+            
+        }
+        
+        
         
     }
     
-    @IBAction func exitButton(_ sender: Any) {
+    @IBAction func exitButton(_ sender: NSButton) {
         NSApplication.shared.terminate(self)
     }
     
