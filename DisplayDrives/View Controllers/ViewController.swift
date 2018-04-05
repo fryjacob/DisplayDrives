@@ -56,6 +56,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var encryptButton: NSButton!
     @IBOutlet weak var passwordField: NSSecureTextField!
     @IBOutlet weak var confirmField: NSSecureTextField!
+    @IBOutlet weak var startButton: NSButton!
+    @IBOutlet weak var spinner: NSProgressIndicator!
+    @IBOutlet weak var statusLabel: NSTextField!
     
     
     // Actions
@@ -73,29 +76,31 @@ class ViewController: NSViewController {
 //        sender.isEnabled = true
         
         if encryptButton.state == NSControl.StateValue.on {
+            
+            
+            startButton.isEnabled = false
+            spinner.isHidden = false
+            spinner.startAnimation(self)
+            statusLabel.isHidden = false
+            
             print("Encrypted")
             if passwordField.stringValue == confirmField.stringValue {
                 print("passwords match")
-                
-                
-                        let path = "/usr/bin/hdiutil"
-                        let arguments = ["create", "-srcfolder", "\(sourcePath)", "-encryption", "-stdinpass", "\(targetPath)/test.dmg", "-ov"]
-                        print("\(path) \(arguments)")
-                        sender.isEnabled = false
-                
-//                        Not sure if this works...
-                        var task =  Process.launchedProcess(launchPath: "/bin/echo", arguments: ["-n", passwordField.stringValue, "|"])
-                        task = Process.launchedProcess(launchPath: path, arguments: arguments)
-                        task.waitUntilExit()
-                        sender.isEnabled = true
+                let path = "/usr/bin/hdiutil"
+                let arguments = ["create", "-srcfolder", "\(sourcePath)", "-encryption", "-stdinpass", "\(targetPath)/test.dmg", "-ov"]
+                print("\(path) \(arguments)")
+                runScript(arguments)
             } else {
                 print("no match")
             }
+        
         } else {
             print("Not encrypted")
 
             
         }
+        
+
         
         
         
@@ -103,6 +108,9 @@ class ViewController: NSViewController {
     
     @IBAction func exitButton(_ sender: NSButton) {
         NSApplication.shared.terminate(self)
+        if isRunning {
+            
+        }
     }
     
 //    func reloadFileList() {
@@ -138,6 +146,21 @@ extension ViewController {
             return urls
         } catch {
             return []
+        }
+    }
+    
+    func runScript(_ arguments:[String]) {
+        var isRunning = true
+        let taskQueue = DispatchQueue.global(qos: DispatchQoS.QoSClass.background)
+        taskQueue.async {
+            Thread.sleep(forTimeInterval: 2.0)
+            DispatchQueue.main.async(execute: {
+                self.startButton.isEnabled = true
+                self.spinner.stopAnimation(self)
+                self.spinner.isHidden = true
+                isRunning = false
+            })
+            
         }
     }
 }
