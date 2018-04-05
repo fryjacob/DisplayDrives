@@ -14,6 +14,8 @@ class ViewController: NSViewController {
     /*
      TODO:
         []  Check the size of the target drive to make sure the image will fit
+        []  Add option to encrypt, take passwords, check they match.
+     
      
      
  
@@ -27,25 +29,6 @@ class ViewController: NSViewController {
     var targetPath: String = ""
     
     
-//    var selectedFolder: URL? {
-//        didSet {
-//            if let selectedFolder = selectedFolder {
-//                filesList = contentsOf(folder: selectedFolder)
-//                sourceTableView.reloadData()
-//                sourceTableView.scrollRowToVisible(0)
-//            }
-//        }
-//    }
-    
-    var selectedItem: URL? {
-        didSet {
-            guard let sourceURL = selectedItem else {
-                return
-            }
-            print(sourceURL.path)
-        }
-    }
-   
     var selectedSource: URL? {
         didSet {
             guard let sourceURL = selectedSource else {
@@ -154,7 +137,7 @@ extension ViewController: NSTableViewDelegate {
         let tableView = notification.object as! NSTableView
         if let identifier = tableView.identifier, identifier == NSUserInterfaceItemIdentifier("sourceTableView") {
             if sourceTableView.selectedRow < 0 {
-                selectedItem = nil
+                selectedSource = nil
                 return
             }
             selectedSource = mountedVolumes[sourceTableView.selectedRow]
@@ -162,7 +145,7 @@ extension ViewController: NSTableViewDelegate {
     
         if let identifier = tableView.identifier, identifier == NSUserInterfaceItemIdentifier("targetTableView") {
             if targetTableView.selectedRow < 0 {
-                selectedItem = nil
+                selectedTarget = nil
                 return
             }
             selectedTarget = mountedVolumes[targetTableView.selectedRow]
