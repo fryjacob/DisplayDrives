@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DC32D76E20754D9F00B5AAC8 /* Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC32D76D20754D9F00B5AAC8 /* Directory.swift */; };
+		DC32D773207BF80A00B5AAC8 /* CreateImageScript.command in Resources */ = {isa = PBXBuildFile; fileRef = DC32D772207BF80A00B5AAC8 /* CreateImageScript.command */; };
 		DC76742F20748D1B007BE8AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76742E20748D1B007BE8AF /* AppDelegate.swift */; };
 		DC76743120748D1B007BE8AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76743020748D1B007BE8AF /* ViewController.swift */; };
 		DC76743320748D1E007BE8AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC76743220748D1E007BE8AF /* Assets.xcassets */; };
@@ -35,17 +36,18 @@
 
 /* Begin PBXFileReference section */
 		DC32D76D20754D9F00B5AAC8 /* Directory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Directory.swift; sourceTree = "<group>"; };
-		DC76742B20748D1B007BE8AF /* DisplayDrives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisplayDrives.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC32D772207BF80A00B5AAC8 /* CreateImageScript.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = CreateImageScript.command; sourceTree = "<group>"; };
+		DC76742B20748D1B007BE8AF /* Lifeboat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lifeboat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC76742E20748D1B007BE8AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC76743020748D1B007BE8AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC76743220748D1E007BE8AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC76743520748D1E007BE8AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC76743720748D1E007BE8AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC76743820748D1E007BE8AF /* DisplayDrives.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DisplayDrives.entitlements; sourceTree = "<group>"; };
-		DC76743D20748D1F007BE8AF /* DisplayDrivesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisplayDrivesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC76743D20748D1F007BE8AF /* LifeboatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeboatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC76744120748D1F007BE8AF /* DisplayDrivesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDrivesTests.swift; sourceTree = "<group>"; };
 		DC76744320748D1F007BE8AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC76744820748D1F007BE8AF /* DisplayDrivesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisplayDrivesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC76744820748D1F007BE8AF /* LifeboatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeboatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC76744C20748D1F007BE8AF /* DisplayDrivesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDrivesUITests.swift; sourceTree = "<group>"; };
 		DC76744E20748D1F007BE8AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 		DC05B9BE20753BC700F2333C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DC32D772207BF80A00B5AAC8 /* CreateImageScript.command */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -112,9 +115,9 @@
 		DC76742C20748D1B007BE8AF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DC76742B20748D1B007BE8AF /* DisplayDrives.app */,
-				DC76743D20748D1F007BE8AF /* DisplayDrivesTests.xctest */,
-				DC76744820748D1F007BE8AF /* DisplayDrivesUITests.xctest */,
+				DC76742B20748D1B007BE8AF /* Lifeboat.app */,
+				DC76743D20748D1F007BE8AF /* LifeboatTests.xctest */,
+				DC76744820748D1F007BE8AF /* LifeboatUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,9 +157,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DC76742A20748D1B007BE8AF /* DisplayDrives */ = {
+		DC76742A20748D1B007BE8AF /* Lifeboat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC76745120748D1F007BE8AF /* Build configuration list for PBXNativeTarget "DisplayDrives" */;
+			buildConfigurationList = DC76745120748D1F007BE8AF /* Build configuration list for PBXNativeTarget "Lifeboat" */;
 			buildPhases = (
 				DC76742720748D1B007BE8AF /* Sources */,
 				DC76742820748D1B007BE8AF /* Frameworks */,
@@ -166,14 +169,14 @@
 			);
 			dependencies = (
 			);
-			name = DisplayDrives;
+			name = Lifeboat;
 			productName = DisplayDrives;
-			productReference = DC76742B20748D1B007BE8AF /* DisplayDrives.app */;
+			productReference = DC76742B20748D1B007BE8AF /* Lifeboat.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DC76743C20748D1F007BE8AF /* DisplayDrivesTests */ = {
+		DC76743C20748D1F007BE8AF /* LifeboatTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC76745420748D1F007BE8AF /* Build configuration list for PBXNativeTarget "DisplayDrivesTests" */;
+			buildConfigurationList = DC76745420748D1F007BE8AF /* Build configuration list for PBXNativeTarget "LifeboatTests" */;
 			buildPhases = (
 				DC76743920748D1F007BE8AF /* Sources */,
 				DC76743A20748D1F007BE8AF /* Frameworks */,
@@ -184,14 +187,14 @@
 			dependencies = (
 				DC76743F20748D1F007BE8AF /* PBXTargetDependency */,
 			);
-			name = DisplayDrivesTests;
+			name = LifeboatTests;
 			productName = DisplayDrivesTests;
-			productReference = DC76743D20748D1F007BE8AF /* DisplayDrivesTests.xctest */;
+			productReference = DC76743D20748D1F007BE8AF /* LifeboatTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DC76744720748D1F007BE8AF /* DisplayDrivesUITests */ = {
+		DC76744720748D1F007BE8AF /* LifeboatUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC76745720748D1F007BE8AF /* Build configuration list for PBXNativeTarget "DisplayDrivesUITests" */;
+			buildConfigurationList = DC76745720748D1F007BE8AF /* Build configuration list for PBXNativeTarget "LifeboatUITests" */;
 			buildPhases = (
 				DC76744420748D1F007BE8AF /* Sources */,
 				DC76744520748D1F007BE8AF /* Frameworks */,
@@ -202,9 +205,9 @@
 			dependencies = (
 				DC76744A20748D1F007BE8AF /* PBXTargetDependency */,
 			);
-			name = DisplayDrivesUITests;
+			name = LifeboatUITests;
 			productName = DisplayDrivesUITests;
-			productReference = DC76744820748D1F007BE8AF /* DisplayDrivesUITests.xctest */;
+			productReference = DC76744820748D1F007BE8AF /* LifeboatUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -235,7 +238,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DC76742620748D1B007BE8AF /* Build configuration list for PBXProject "DisplayDrives" */;
+			buildConfigurationList = DC76742620748D1B007BE8AF /* Build configuration list for PBXProject "Lifeboat" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -248,9 +251,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DC76742A20748D1B007BE8AF /* DisplayDrives */,
-				DC76743C20748D1F007BE8AF /* DisplayDrivesTests */,
-				DC76744720748D1F007BE8AF /* DisplayDrivesUITests */,
+				DC76742A20748D1B007BE8AF /* Lifeboat */,
+				DC76743C20748D1F007BE8AF /* LifeboatTests */,
+				DC76744720748D1F007BE8AF /* LifeboatUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC32D773207BF80A00B5AAC8 /* CreateImageScript.command in Resources */,
 				DC76743320748D1E007BE8AF /* Assets.xcassets in Resources */,
 				DC76743620748D1E007BE8AF /* Main.storyboard in Resources */,
 			);
@@ -313,12 +317,12 @@
 /* Begin PBXTargetDependency section */
 		DC76743F20748D1F007BE8AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DC76742A20748D1B007BE8AF /* DisplayDrives */;
+			target = DC76742A20748D1B007BE8AF /* Lifeboat */;
 			targetProxy = DC76743E20748D1F007BE8AF /* PBXContainerItemProxy */;
 		};
 		DC76744A20748D1F007BE8AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DC76742A20748D1B007BE8AF /* DisplayDrives */;
+			target = DC76742A20748D1B007BE8AF /* Lifeboat */;
 			targetProxy = DC76744920748D1F007BE8AF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -498,7 +502,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bennettfry.DisplayDrivesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DisplayDrives.app/Contents/MacOS/DisplayDrives";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lifeboat.app/Contents/MacOS/Lifeboat";
 			};
 			name = Debug;
 		};
@@ -518,7 +522,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bennettfry.DisplayDrivesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DisplayDrives.app/Contents/MacOS/DisplayDrives";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lifeboat.app/Contents/MacOS/Lifeboat";
 			};
 			name = Release;
 		};
@@ -563,7 +567,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DC76742620748D1B007BE8AF /* Build configuration list for PBXProject "DisplayDrives" */ = {
+		DC76742620748D1B007BE8AF /* Build configuration list for PBXProject "Lifeboat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC76744F20748D1F007BE8AF /* Debug */,
@@ -572,7 +576,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC76745120748D1F007BE8AF /* Build configuration list for PBXNativeTarget "DisplayDrives" */ = {
+		DC76745120748D1F007BE8AF /* Build configuration list for PBXNativeTarget "Lifeboat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC76745220748D1F007BE8AF /* Debug */,
@@ -581,7 +585,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC76745420748D1F007BE8AF /* Build configuration list for PBXNativeTarget "DisplayDrivesTests" */ = {
+		DC76745420748D1F007BE8AF /* Build configuration list for PBXNativeTarget "LifeboatTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC76745520748D1F007BE8AF /* Debug */,
@@ -590,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC76745720748D1F007BE8AF /* Build configuration list for PBXNativeTarget "DisplayDrivesUITests" */ = {
+		DC76745720748D1F007BE8AF /* Build configuration list for PBXNativeTarget "LifeboatUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC76745820748D1F007BE8AF /* Debug */,
